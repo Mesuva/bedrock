@@ -1,71 +1,94 @@
 // Basics
-@import "./mixins/item-select-list-hover";
-@import "type";
-@import "buttons";
+@import './mixins/item-select-list-hover';
+@import 'type';
+@import 'buttons';
+@import 'tables';
+@import 'breadcrumb';
 
 // Support classes
-@import "./animate";
+@import './animate';
+@import './transitions';
 
 // jQuery UI
-@import "~jquery-ui/themes/base/core.css";
-@import "~jquery-ui/themes/base/resizable.css";
-@import "~jquery-ui/themes/base/dialog.css";
-@import "~jquery-ui/themes/base/datepicker.css";
-@import "~jquery-ui/themes/base/draggable.css";
-@import "~jquery-ui/themes/base/sortable.css";
-@import "~jquery-ui/themes/base/slider.css";
-@import "./jquery-ui/theme";
-@import "./jquery-ui/overrides";
+@import '~jquery-ui/themes/base/core.css';
+@import '~jquery-ui/themes/base/resizable.css';
+@import '~jquery-ui/themes/base/dialog.css';
+@import '~jquery-ui/themes/base/datepicker.css';
+@import '~jquery-ui/themes/base/draggable.css';
+@import '~jquery-ui/themes/base/sortable.css';
+@import '~jquery-ui/themes/base/slider.css';
+@import './jquery-ui/theme';
+@import './jquery-ui/overrides';
 
 // Toolbar includes
-@import "./toolbar";
-@import "./intelligent-search";
+@import './toolbar';
+@import './intelligent-search';
 
 // Dialogs
-@import "./dialog";
+@import './dialog';
 
 // Panels
-@import "./panels";
+@import './panels';
+
+// Dialogs
+@import './dialogs';
 
 // In page editing
-@import "page-areas";
-@import "inline-toolbar";
-@import "layouts";
+@import 'page-areas';
+@import 'inline-toolbar';
+@import 'layouts';
 
 // Style customizer
-@import "./style-customizer";
+@import './style-customizer';
 
 // Progress bar, notifications, HUD, in page help
-@import "./help";
-@import "./hud";
-@import "./nprogress";
+@import './help';
+@import './hud';
+@import './nprogress';
 
 // Search results
-@import "./search";
-@import "./search-v8";
+@import './search';
 
 // Sitemap
-@import "./sitemap";
+@import './sitemap';
 
 // Fancytree
-@import "~jquery.fancytree/dist/skin-bootstrap/ui.fancytree.css";
+@import '~jquery.fancytree/dist/skin-bootstrap/ui.fancytree.css';
 
 // Help System
-@import "~bootstrap-tourist/bootstrap-tourist.css";
+@import '~bootstrap-tourist/bootstrap-tourist.css';
 
 // File Manager
-@import "./file-manager";
+@import './file-manager';
+
+// File Uploader
+@import './file-uploader';
+
+// Bootstrap Select
+@import '~bootstrap-select/sass/bootstrap-select';
+
+// Forms
+@import './forms';
 
 // Selectize
-@import "~selectize/dist/css/selectize.css";
-@import "./selectize";
+@import '~selectize-bootstrap4-theme/scss/selectize.bootstrap4';
+
+@import './selectize';
 
 // Miscellaneous components
-@import "./tabs";
-@import "./item-selector";
-@import "./item-select-list";
-@import "./permission-grid";
-@import "./tooltips";
-@import "~spectrum-colorpicker/spectrum.css";
-@import "./icons";
-@import "./date-time";
+@import './vue';
+@import './boards';
+@import './pagination';
+@import './forms';
+@import './tabs';
+@import './item-selector';
+@import './item-select-list';
+@import './permission-grid';
+@import './tooltips';
+@import '~spectrum-colorpicker/spectrum.css';
+@import './icons';
+@import './date-time';
+@import './dropdown';
+@import './utilities';
+@import './popover';
+@import './nav';

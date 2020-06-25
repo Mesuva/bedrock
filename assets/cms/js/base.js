@@ -1,75 +1,71 @@
-
 // Import required libraries.
-import * as _ from 'underscore';
-import NProgress from 'nprogress';
-import PNotify from 'pnotify/dist/es/PNotify';
-
-window.NProgress = NProgress;
-window._ = _;
-window.PNotify = PNotify;
+import _ from 'underscore'
+import NProgress from 'nprogress'
+import PNotify from './pnotify'
 
 // JavaScript/jQuery base libraries.
-import 'json5';
-import 'jquery.cookie';
-import 'jquery-form';
+import 'json5'
+import 'jquery.cookie'
+import 'jquery-form'
+import 'bootstrap-select'
+import 'dropzone/dist/dropzone'
 
 // jQuery UI components
-import 'jquery-ui/ui/widgets/button';
-import 'jquery-ui/ui/widgets/dialog';
-import 'jquery-ui/ui/widgets/datepicker';
-import 'jquery-ui/ui/widgets/draggable';
-import 'jquery-ui/ui/widgets/droppable';
-import 'jquery-ui/ui/widgets/sortable';
-import 'jquery-ui/ui/widgets/slider';
+import 'jquery-ui/ui/widgets/button'
+import 'jquery-ui/ui/widgets/dialog'
+import 'jquery-ui/ui/widgets/datepicker'
+import 'jquery-ui/ui/widgets/draggable'
+import 'jquery-ui/ui/widgets/droppable'
+import 'jquery-ui/ui/widgets/sortable'
+import 'jquery-ui/ui/widgets/slider'
 
 // Core concrete5 backend
-import './events';
-import './asset-loader';
-import './page-indexer';
-import './concrete5';
+import './events'
+import './asset-loader'
+import './page-indexer'
+import './concrete5'
 
 // CMS UI Components
-import './panels';
-import './toolbar';
-import './legacy-dialog';
-import './alert';
+import './panels'
+import './toolbar'
+import './legacy-dialog'
+import './alert'
+import './page-notification'
 
 // Edit Mode
-import './edit-mode';
+import './edit-mode'
 
 // AJAX Forms and in-page notifications
-import './ajax-request/base';
-import './ajax-request/form';
-import './ajax-request/block';
+import './ajax-request/base'
+import './ajax-request/form'
+import './ajax-request/block'
 
 // Progressive operations
-import './progressive-operations';
+import './progressive-operations'
 
 // Search
-import './search/base';
-import './search/table';
-import './search/field-selector';
-import './search/preset-selector';
+import './search/base'
+import './search/table'
 
 // Tree
-import './tree';
-import 'jquery.fancytree/dist/modules/jquery.fancytree.glyph';
-import 'jquery.fancytree/dist/modules/jquery.fancytree.persist';
-import 'jquery.fancytree/dist/modules/jquery.fancytree.dnd';
-import 'jquery.fancytree/dist/modules/jquery.fancytree';
+import './tree'
+import 'jquery.fancytree/dist/modules/jquery.fancytree.glyph'
+import 'jquery.fancytree/dist/modules/jquery.fancytree.persist'
+import 'jquery.fancytree/dist/modules/jquery.fancytree.dnd'
+import 'jquery.fancytree/dist/modules/jquery.fancytree'
 
 // Sitemap
-import  './sitemap/sitemap';
-import  './in-context-menu';
-import  './sitemap/menu';
-import  './sitemap/search';
-import  './sitemap/selector';
+import './sitemap/sitemap'
+import './in-context-menu'
+import './sitemap/menu'
+import './sitemap/search'
+import './sitemap/selector'
 
 // Users
-import './users';
+import './users'
 
 // Express
-import './express';
+import './express'
 
 // Style customizer
 
@@ -77,25 +73,32 @@ import './express';
 // TBD
 
 // File Manager
-import './file-manager/uploader';
-import './file-manager/search';
-import './file-manager/selector';
-import './file-manager/menu';
+import './file-manager/uploader'
+import './file-manager/file-manager'
 
 // Miscellaneous UI components
-import 'selectize';
-import 'spectrum-colorpicker';
-import 'tristate/jquery.tristate';
-import 'jquery-text-counter/textcounter';
-import './jquery-awesome-rating';
-import './liveupdate/quicksilver';
-import './liveupdate/jquery-liveupdate';
+import 'selectize'
+import 'spectrum-colorpicker'
+import 'tristate/jquery.tristate'
+import 'jquery-text-counter/textcounter'
+import './jquery-awesome-rating'
+import './liveupdate/quicksilver'
+import './liveupdate/jquery-liveupdate'
 
 // Help
-import './help/help';
-
-// Boards
-import './boards';
+import './help/help'
 
 // Calendar component
-import './calendar';
+import './calendar'
+
+// Vue components.
+import components from '@concretecms/bedrock/assets/cms/components/index'
+import VueManager from '@concretecms/bedrock/assets/cms/js/vue/Manager'
+
+window.NProgress = NProgress
+window._ = _
+window.PNotify = PNotify
+
+// Register our core components with the vue manager
+VueManager.bindToWindow(window)
+Concrete.Vue.createContext('cms', components)
